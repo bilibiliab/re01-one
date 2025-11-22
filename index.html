@@ -1,42 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>神秘男的自白</title>
     <style>  
-      body {
-        margin: 0;
-      }
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            color: #333;
+        }
+        /* 头部样式 */
+        .header {
+            background: linear-gradient(135deg, #f5f5f5 10%, #e0e0e0 100%);
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://picsum.photos/id/1048/1200/400");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            margin: 20px 0 10px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+            position: relative;
+            z-index: 1;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            position: relative;
+            z-index: 1;
+        }
+        /* 内容样式 */
+        .content {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+        .achievement-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .achievement-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .achievement-item p {
+            margin: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .achievement-item p::before {
+            content: "★";
+            color: #ffc107;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        /* 底部样式 */
+        .footer {
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            letter-spacing: 2px;
+        }
     </style>
-  </head>
-  <body>
-    <div style="
-    background-color:#f1f1f1;
-    text-align:center;
-    padding:40px;
-    ">
-      <img src="https://i.imgs.ovh/2025/11/22/CS86QN.jpeg" alt="杨新柯" width="150px" height="150px" >
+</head>
+<body>
+    <div class="header">
+        <img src="https://moegirl.uk/images/3/35/%E6%B8%A9%E6%B0%B4%E5%92%8C%E5%BD%A6.jpg" alt="">
+        
+        <h1 class="title">小锡恋曲ᨳ ദ</h1>
+        <p class="subtitle">热爱生活，奔赴热爱</p >
     </div>
-    <div style="
-    max-width:700px;
-    margin:30px auto;
-    padding: 15px;
-    line-height:1.7;
-    ">
-      <p>第五人格最强监管</p>
-      <p>王者荣耀最强海诺</p>
-      <p>音乐界杰出钢琴家</p>
-      <p>我是天下第一帅</p>
-      <p>我是世界第一强</p>
+    <div class="content">
+        <ul class="achievement-list">
+            <li class="achievement-item">
+                <p>《第五人格》最强监管者，掌控全场节奏</p >
+            </li>
+            <li class="achievement-item">
+                <p>《王者荣耀》顶尖海诺玩家，技能精准释放</p >
+            </li>
+            <li class="achievement-item">
+                <p>音乐领域杰出钢琴家，指尖流淌动人旋律</p >
+            </li>
+            <li class="achievement-item">
+                <p>自信宣言：我是天下第一帅</p >
+            </li>
+            <li class="achievement-item">
+                <p>实力彰显：我是世界第一强</p >
+            </li>
+        </ul>
     </div>
-    <div style="
-    background-color:#f1f1f1;
-    text-align:center;
-    padding:40px;
-    font-size:12px;
-    ">
-    <p>我的自白</p>
-    </div>    
-  </body>
+    <div class="footer">
+        <p>不忘初心 · 方得始终</p >
+    </div>
+</body>
 </html>
